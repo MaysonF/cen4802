@@ -1,0 +1,40 @@
+import java.util.Scanner;
+/**
+ * 
+ * @author Mayson
+ * public class FibonacciRecursion which will allow user to input desired nth term and output sequence of term
+ *
+ */
+public class FibonacciRecurison 
+{
+	public static void main(String args[])
+	{
+		int n;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter desired nth term of Fibonacci sequence ");
+		n = scan.nextInt();
+		System.out.print("The nth term " + n + " of the Fibonacci sequence is ");
+		System.out.print(fibonacci(n)+" ");
+
+	}
+/**
+ * 
+ * @param y to perform recursion on fibonacci sequence
+ * @return
+ */
+	static int fibonacci(int y)
+	{
+		if (y==0)
+			return 0;
+		
+		else if (y==1)
+			return 1;
+		
+		else 
+			return(fibonacci(y-1) + fibonacci(y-2));
+	}
+}
+
+
+
